@@ -1,0 +1,46 @@
+<div class="medium-wide hori-centered" id="static-nav-container">
+	<div class="flex-container medium-wide" id="parts-container">
+		<div class="one-third-box button-box padded-box" id="fagwiki-box">
+			{% if meta.title != "Framsida" %}
+			<div class="parts-illustration-small">
+			{% else %}
+			<div class="parts-illustration">
+			{% endif %}
+				<img src="{{ theme_url }}/gfx/wiki-logo.png"/>
+			</div>
+			<h2>Fagwiki</h2>
+			{% if meta.title == "Framsida" %}
+			<p>Lær mer om overvannshåndtering, eller bidra til å gjøre fagwikien rikere</p>
+			{% endif %}
+			<a href="http://ovase.no/wiki/index.php/Forside">
+				<span class="link-spanner"/>
+			</a>
+		</div>
+		<div class="one-third-box disabled-box button-box padded-box">
+			{% if meta.title != "Framsida" %}
+			<div class="parts-illustration-small">
+			{% else %}
+			<div class="parts-illustration">
+			{% endif %}
+				<img src="{{ theme_url }}/gfx/city-logo.png"/>
+			</div>
+			<h2>Prosjekter</h2>
+			{% if meta.title == "Framsida" %}
+			<p>Bli inspirert av eksisterende norske overvannsanlegg</p>
+			{% endif %}
+		</div>
+		<div class="one-third-box disabled-box button-box padded-box">
+			{% if meta.title != "Framsida" %}
+			<div class="parts-illustration-small">
+			{% else %}
+			<div class="parts-illustration">
+			{% endif %}
+				<img src="{{ theme_url }}/gfx/actor-logo.png"/>
+			</div>
+			<h2>Aktører</h2>
+			{% if meta.title == "Framsida" %}
+			<p>Finn bransjeaktører som jobber med overvannshåndtering</p>
+			{% endif %}
+		</div>
+	</div>
+</div>

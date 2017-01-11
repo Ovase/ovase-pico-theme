@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+
+  <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+  {% if meta.description %}
+  <meta name="description" content="{{ meta.description|striptags }}">
+  {% endif %}{% if meta.robots %}
+  <meta name="robots" content="{{ meta.robots }}">
+  {% endif %}
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{{ theme_url }}/css/basics.css" type="text/css" />
+  <link rel="stylesheet" href="{{ theme_url }}/css/master.css" type="text/css" />
+
+</head>
+<body>
+  <div id="container-outer" class="full-wide hori-centered">
+
+    <div id="header-container">
+      <div id="header">
+        <div id="header-logo">
+          <div class="verti-centered">
+            <a href="{{ base_url }}"><img src="{{ theme_url }}/gfx/ovase-logo.png"/></a>
+          </div>
+        </div>
+        <div id="header-text" class="verti-centered">
+          <div class="verti-centered">
+            <h3>Overvannssenteret</h3>
+            <h1>OVASE</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mission-and-nav-container" class="full-wide">
+      {% if meta.title == "Framsida" %}
+      <div id="mission-box" class="medium-wide hori-centered">
+        <div id="mission-icon" class="left-illustration">
+          <img src="{{ theme_url }}/gfx/target-icon.png" width="72"/>
+        </div>
+        <div id="mission-text">
+          <h2>Hva er Ovase?</h2>
+          <p>
+            Ovase er et kunnskapssenter for overvannshåndtering i Norge. Vi er foreløpig i oppstartsfasen, og flere deler av nettstedet er under utvikling. Ovase.no har som mål å samle oppdatert informasjon om overvannsløsninger og være en felles plattform for fagmiljøer og samfunnsparter for å bidra til at vi effektivt får robust og bærekraftig overvannsinfrastruktur i Norge.
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% include 'navigation.twig' %}
+    </div>
+
+    <!-- *** CONTENT STARTS HERE *** -->
+
+    <div id="content-container" class="medium-wide hori-centered">
+      {{ content }}
+    </div>
+
+    <!-- *** CONTENT ENDS HERE *** -->
+
+    <footer class="full-wide hori-centered">
+      <div id="footer-container" class="medium-wide hori-centered flex-container">
+        <div id="pages" class="one-third-box">
+          <h3>Sider</h3>
+          <nav>
+            <ul>
+              {% for page in pages if page.title %}
+                <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                  <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div id="other" class="one-third-box">
+          <h3>Diverse</h3>
+          <p>Milepæl-ikon laga av <a href="https://metropolicons.com/">Metropolicons</a></p>
+          <p>Andre ikon og Ovases logo av <a href="https://no.linkedin.com/in/ken-lie-a746395b">Ken Lie</a></p>
+          <p>Utforming av <a href="https://github.com/LangdalP/">Peder Voldnes Langdal</a></p>
+        </div>
+        <div id="contact-info" class="one-third-box">
+          <h3>Kontakt</h3>
+          <p id="mailto-paragraph"><a href="mailto:anine.drageset@ovase.no">anine.drageset@ovase.no</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
