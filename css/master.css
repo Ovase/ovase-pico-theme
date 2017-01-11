@@ -255,9 +255,51 @@ footer {
 
 /* *** SCREEN SIZE ADJUSTMENTS *** */
 
-@media (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .one-third-box {
         width: 100%;
         margin-bottom: 1em;
+    }
+
+    #pages {
+        border-right: none;
+    }
+
+    #other {
+        border-right: none;
+    }
+}
+
+
+@media screen and (min-width: 980px) /* Desktop */ {
+    .one-third-box {
+        width: 32%;
+        margin-bottom: 0;
+    }
+
+    #pages {
+        border-right: 1px solid white;
+    }
+
+    #other {
+        border-right: 1px solid white;
+    }
+}
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+    .one-third-box {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    #pages {
+        border-right: none;
+    }
+
+    #other {
+        border-right: none;
     }
 }
