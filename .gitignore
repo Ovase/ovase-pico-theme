@@ -1,2 +1,5 @@
 # Sublime-specific
 *.sublime-workspace
+
+# Composer
+vendor/
