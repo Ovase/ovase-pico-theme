@@ -107,6 +107,18 @@
     margin-bottom: 0.8em;
 }
 
+.enabled-box {
+    background-color: #FFF;
+}
+
+.enabled-box:hover {
+    background-color: #B1C48C;
+}
+
+.enabled-box h2 {
+    color: #7A905A;
+}
+
 .disabled-box {
     background-color: #EBEBEB;
 }
@@ -124,18 +136,6 @@
     width: 48px;
     display: inline-block;
     float: left;
-}
-
-#fagwiki-box {
-    background-color: #FFF;
-}
-
-#fagwiki-box:hover {
-    background-color: #B1C48C;
-}
-
-#fagwiki-box h2 {
-    color: #7A905A;
 }
 
 /* *** CONTENT *** */

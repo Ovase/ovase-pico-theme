@@ -1,6 +1,6 @@
 <div class="medium-wide hori-centered" id="static-nav-container">
 	<div class="flex-container medium-wide" id="parts-container">
-		<div class="one-third-box button-box padded-box" id="fagwiki-box">
+		<div class="one-third-box button-box padded-box enabled-box">
 			{% if meta.title != "Framsida" %}
 			<div class="parts-illustration-small">
 			{% else %}
@@ -12,11 +12,11 @@
 			{% if meta.title == "Framsida" %}
 			<p>Lær mer om overvannshåndtering, eller bidra til å gjøre fagwikien rikere</p>
 			{% endif %}
-			<a href="http://ovase.no/wiki/index.php/Forside">
+			<a href="http://wiki.ovase.no/">
 				<span class="link-spanner"/>
 			</a>
 		</div>
-		<div class="one-third-box disabled-box button-box padded-box">
+		<div class="one-third-box button-box padded-box enabled-box">
 			{% if meta.title != "Framsida" %}
 			<div class="parts-illustration-small">
 			{% else %}
@@ -28,8 +28,11 @@
 			{% if meta.title == "Framsida" %}
 			<p>Bli inspirert av eksisterende norske overvannsanlegg</p>
 			{% endif %}
+			<a href="http://proto.ovase.no/prosjekter">
+				<span class="link-spanner"/>
+			</a>
 		</div>
-		<div class="one-third-box disabled-box button-box padded-box">
+		<div class="one-third-box button-box padded-box enabled-box">
 			{% if meta.title != "Framsida" %}
 			<div class="parts-illustration-small">
 			{% else %}
@@ -41,6 +44,9 @@
 			{% if meta.title == "Framsida" %}
 			<p>Finn bransjeaktører som jobber med overvannshåndtering</p>
 			{% endif %}
+			<a href="http://proto.ovase.no/akteur">
+				<span class="link-spanner"/>
+			</a>
 		</div>
 	</div>
 </div>
